@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour
     [Header("Game controller for controlling the game")]
     public GameController gameController;
     [Header("Default Velocity")]
-    public float velocity = 5;
+    public float velocity = 1;
     //Physics for the bird
     private Rigidbody2D rb;
     //hight of the bird object on the y axis
@@ -18,6 +18,11 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameController = GetComponent<GameController>();
+        Time.timeScale = 1;
+        rb = GetComponent<Rigidbody2D>();
+        objectHeight =
+            transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
 
     }
 
