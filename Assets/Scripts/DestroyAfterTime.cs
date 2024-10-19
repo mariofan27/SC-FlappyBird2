@@ -12,13 +12,15 @@ public class DestroyAfterTime : MonoBehaviour
     void Start()
     {
         //Execute DestroyObject function based on timeToDestruction
+        //Hit the Griddy
         Invoke("DestroyObject", timeToDestruction);
     }
 
-    // Update is called once per frame
-    void Update()
+    // This function will destroy this object
+    void DestroyObject()
     {
-
+        //Destroy object
+        Destroy(gameObject);
     }
 }
 
