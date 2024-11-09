@@ -33,8 +33,6 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = Vector2.up * velocity;
-
-
         }
     }
 
@@ -48,6 +46,8 @@ public class PlayerControls : MonoBehaviour
         {
             //Game is at a stopping state
             Time.timeScale = 0;
+            //Game Over function is called from the game manager
+            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         }
     }
 }

@@ -18,13 +18,24 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //Speed for the game is at a playing state
+        Time.timeScale = 1;
+        //Score in visible
+        scoreCanvas.SetActive(false);
+        //Game Over UI is invisible
+        gameOverCanvas.SetActive(false);
+        //The spawner is shown in the game
+        spawner.SetActive(true);
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOver()
     {
-
+        //Game Over UI is visible
+        gameOverCanvas.SetActive(true);
+        //The spawner is now invisible in the Game
+        spawner.SetActive(false);
+        //The speed for the game is now at a stopping state
+        Time.timeScale = 0;
     }
 }

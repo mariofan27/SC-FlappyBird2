@@ -12,7 +12,7 @@ public class Score : MonoBehaviour
     {
         score = 0;
     }
-
+    //Hit the Griddy
     public void Update()
     {
         GetComponent<UnityEngine.UI.Text>().text = score.ToString();
