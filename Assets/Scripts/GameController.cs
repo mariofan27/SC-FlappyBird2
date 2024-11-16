@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
         //Speed for the game is at a playing state
         Time.timeScale = 1;
         //Score in visible
-        scoreCanvas.SetActive(false);
+        scoreCanvas.SetActive(true);
         //Game Over UI is invisible
         gameOverCanvas.SetActive(false);
         //The spawner is shown in the game

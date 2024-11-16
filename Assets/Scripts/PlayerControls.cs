@@ -47,7 +47,7 @@ public class PlayerControls : MonoBehaviour
             //Game is at a stopping state
             Time.timeScale = 0;
             //Game Over function is called from the game manager
-            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
+            FindObjectOfType<GameController>().GameOver();
         }
     }
 }
